@@ -79,7 +79,7 @@ public class LoanCalc {
 	private static double endBalance(double loan, double rate, int n, double payment) {
 		double endBalance = (loan - payment) * (1 + rate);
 		for (int i = 2 ; i <= n ; i++){
-			endBalance = (endBalance - payment) * (1 + rate);
+			endBalance = (endBalance - payment) * (1.0 + rate/100);
 		}
     	return endBalance;
 	}
